@@ -10,12 +10,12 @@ echo "Are you ready?"
 read -p "Press [Enter] to continue or [CTRL+C] to abort"
 
 echo "Updating Package List"
-sudo apt-get update > ~/UpdateLog
+sudo apt-get update > ./UpdateLog
 echo "Done"
 echo "Upgrading Standard Packages"
-sudo apt-get upgrade -y >> ~/UpdateLog
+sudo apt-get upgrade -y >> ./UpdateLog
 echo "Done"
 echo "Upgrading Distribution and Kernel"
-sudo apt-get dist-upgrade -y >> ~/UpdateLog
+sudo apt-get dist-upgrade -y >> ./UpdateLog
 echo "Done"
 exit
