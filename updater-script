@@ -6,6 +6,9 @@ echo "by javelinanddart"
 echo "Welcome $USER, this is my update script."
 echo "It will help keep your system up-to-date"
 
+echo "Are you ready?"
+read -p "Press [Enter] to continue..."
+
 echo "Updating Package List"
 sudo apt-get update > ~/UpdateLog
 echo "Done"
