@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Updater Script V1.0"
+echo "by javelinanddart"
+
+echo "Updating Package List"
+sudo apt-get update > ~/UpdateLog
+echo "Done"
+echo "Upgrading Standard Packages"
+sudo apt-get upgrade -y >> ~/UpdateLog
+echo "Done"
+echo "Upgrading Distribution and Kernel"
+sudo apt-get dist-upgrade -y >> ~/UpdateLog
+echo "Done"
+exit
