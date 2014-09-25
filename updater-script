@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Updater Script V1.0"
+echo "Updater Script V2.0"
 echo "by javelinanddart"
 
 echo "Welcome $USER, this is my update script."
