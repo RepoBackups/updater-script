@@ -3,6 +3,9 @@
 echo "Updater Script V1.0"
 echo "by javelinanddart"
 
+echo "Welcome $USER, this is my update script."
+echo "It will help keep your system up-to-date"
+
 echo "Updating Package List"
 sudo apt-get update > ~/UpdateLog
 echo "Done"
