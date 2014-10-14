@@ -1,21 +1,59 @@
 #!/bin/bash
 
-echo "Updater Script V3.0"
+echo "Updater Script"
 echo "by javelinanddart"
+
+
+
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo "Script Started"
+date
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" >> ./UpdateLog
+echo "Script Started" >> ./UpdateLog
+date >> ./UpdateLog
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" >> ./UpdateLog
 
 echo "Welcome $USER, this is my update script."
 echo "It will help keep your system up-to-date"
 
 echo "Are you ready?"
-read -p "Press [Enter] to continue or [CTRL+C] to abort"
+read -p "Press [ENTER] to continue or [CTRL+C] to abort"
 
 echo "Updating Package List"
-sudo apt-get update > ./UpdateLog
-echo "Done"
-echo "Upgrading Standard Packages"
+echo "Updating Package List" >> ./UpdateLog
+echo "Started"
+echo "Started" >> ./UpdateLog
+sudo apt-get update >> ./UpdateLog
+echo "Finished"
+echo "Finished" >> ./UpdateLog
+echo "Updating Standard Packages"
+echo "Updating Standard Packages" >> ./UpdateLog
+echo "Started"
+echo "Started" >> ./UpdateLog
 sudo apt-get upgrade -y >> ./UpdateLog
-echo "Done"
-echo "Upgrading Distribution and Kernel"
+echo "Finished"
+echo "Finished" >> ./UpdateLog
+echo "Updating Distribution and Kernel"
+echo "Updating Distribution and Kernel" >> ./UpdateLog
+echo "Started"
+echo "Started" >> ./UpdateLog
 sudo apt-get dist-upgrade -y >> ./UpdateLog
-echo "Done"
+echo "Finished"
+echo "Finished" >> ./UpdateLog
+
+echo "Cleaning Up" 
+echo "Cleaning Up" >> ./UpdateLog
+
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo "Script finished"
+date
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" >> ./UpdateLog
+echo "Script Finished" >> ./UpdateLog
+date >> ./UpdateLog
+echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" >> ./UpdateLog
 exit
+
